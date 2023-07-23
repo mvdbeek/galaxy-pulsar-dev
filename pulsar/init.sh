@@ -7,7 +7,7 @@ root="$(cd "$(dirname "$0")/.." ; pwd)"
 
 
 docker_run() {
-    log_exec docker run --rm -it --name pulsar-init -w /pulsar --user "${UID}:${GID}" "$@"
+    log_exec docker run --rm -it --name pulsar-init -w /pulsar --user "501:20" "$@"
 }
 
 

@@ -7,7 +7,7 @@ root="$(cd "$(dirname "$0")/.." ; pwd)"
 
 
 docker_run() {
-    log_exec docker run --rm -it --name galaxy-init -w /galaxy --user "${UID}:${GID}" "$@"
+    log_exec docker run --rm -it --name galaxy-init -w /galaxy --user "501:20" "$@"
 }
 
 

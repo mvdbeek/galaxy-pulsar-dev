@@ -15,6 +15,7 @@ WORKDIR /galaxy
 
 ENV PATH=/galaxy/.venv/bin:$PATH
 ENV VIRTUAL_ENV=/galaxy/.venv
+RUN python3 -m pip install psycopg2-binary
 
 # wait for galaxy-web to create db to avoid race condition
 CMD python3 -u /pgcheck.py yeah && python3 scripts/galaxy-main --attach-to-pool=job-handlers

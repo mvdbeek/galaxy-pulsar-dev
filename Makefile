@@ -1,5 +1,5 @@
-UID	:= $(shell id -u)
-GID	:= $(shell id -g)
+UID	:= 501
+GID	:= 20
 
 
 up: .env galaxy/venv pulsar/venv
@@ -15,7 +15,7 @@ restart:
 	docker-compose restart galaxy-web galaxy-job pulsar
 
 .env:
-	sh ./.env.in
+	zsh ./.env.in
 
 galaxy/venv:
 	bash ./galaxy/init.sh

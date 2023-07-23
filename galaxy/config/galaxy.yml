@@ -27,3 +27,4 @@ galaxy:
   job_config_file: /galaxy/config/job_conf.yml
   admin_users: admin@example.org
   cleanup_job: never
+  conda_auto_install: false
